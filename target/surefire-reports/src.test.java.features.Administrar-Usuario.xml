@@ -1,0 +1,20 @@
+<testsuite failures="1" name="src/test/java/features/Administrar-Usuario.feature" skipped="0" tests="1" time="1.075014">
+  <testcase classname="src.test.java.features.Administrar-Usuario" name="Crear usuarios con lista/arreglo" time="1.075014">
+    <failure message="Administrar-Usuario.feature:17 - assert evaluated to false: message == '1175592'">* def urlBase = 'https://petstore.swagger.io/v2' .......................... passed
+* def path = '/user' ...................................................... passed
+* def array = '/createWithArray' .......................................... passed
+* def user = '/jorgerq' ................................................... passed
+Given url urlBase + path + array .......................................... passed
+And request [  {    "id": 1175592,    "username": "jorgerq",    "firstName": "jorge",    "lastName": "ramos",    "email": "ramosq@gmail.com",    "password": "123456",    "phone": "123456789",    "userStatus": 0  },  {    "id": 1175593,    "username": "jeffarrq",    "firstName": "jeffar",    "lastName": "lopez",    "email": "jeffarlo@gmail.com",    "password": "123456",    "phone": "123456789",    "userStatus": 0  }] . passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def message = response.message .......................................... passed
+* print 'variable message es ' + message .................................. passed
+* assert message == '1175592' ............................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Administrar-Usuario.feature:17 - assert evaluated to false: message == '1175592'&#13;
+	at ✽.* assert message == '1175592' (Administrar-Usuario.feature:17)</failure>
+  </testcase>
+</testsuite>

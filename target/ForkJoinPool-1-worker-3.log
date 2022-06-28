@@ -1,0 +1,31 @@
+10:14:37.513 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+10:14:37.900 request:
+1 > POST https://petstore.swagger.io/v2/user/createWithArray
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 319
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.15)
+[{"id":1175592,"username":"jorgerq","firstName":"jorge","lastName":"ramos","email":"ramosq@gmail.com","password":"123456","phone":"123456789","userStatus":0},{"id":1175593,"username":"jeffarrq","firstName":"jeffar","lastName":"lopez","email":"jeffarlo@gmail.com","password":"123456","phone":"123456789","userStatus":0}]
+
+10:14:38.585 response time in milliseconds: 682,05
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 22 Jun 2022 15:14:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"ok"}
+
+10:14:38.586 [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+
+10:14:38.597 [print] variable message es ok
+10:14:38.605 assertion failed: assert evaluated to false: message == '1175592'
